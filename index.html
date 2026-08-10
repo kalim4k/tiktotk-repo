@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>TikTok</title>
+    <meta name="description" content="Regardez, créez et partagez des vidéos courtes et amusantes sur TikTok." />
+    <meta name="keywords" content="tiktok, videos, reseau social, profils, tendance, musique, court-metrage" />
+    <meta name="author" content="TikTok" />
+
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="TikTok" />
+    
+    <!-- Icons -->
+    <link rel="icon" href="https://ysbiedwkakdqadxtuwab.supabase.co/storage/v1/object/public/uploads/da6978f0-ecdb-4bb7-b0ce-ac96730cd7c4.png" type="image/png" />
+    <link rel="apple-touch-icon" href="https://ysbiedwkakdqadxtuwab.supabase.co/storage/v1/object/public/uploads/da6978f0-ecdb-4bb7-b0ce-ac96730cd7c4.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="TikTok" />
+    <meta property="og:description" content="Regardez, créez et partagez des vidéos courtes et amusantes sur TikTok." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ysbiedwkakdqadxtuwab.supabase.co/storage/v1/object/public/uploads/da6978f0-ecdb-4bb7-b0ce-ac96730cd7c4.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TikTok" />
+    <meta name="twitter:description" content="Regardez, créez et partagez des vidéos courtes sur TikTok." />
+    <meta name="twitter:image" content="https://ysbiedwkakdqadxtuwab.supabase.co/storage/v1/object/public/uploads/da6978f0-ecdb-4bb7-b0ce-ac96730cd7c4.png" />
+  </head>
+
+  <body>
+    <noscript>
+      Veuillez activer JavaScript pour utiliser TikTok et profiter de nos vidéos en ligne.
+    </noscript>
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('Service Worker enregistré avec succès:', registration.scope);
+            }, function(err) {
+              console.log('Échec de l\'enregistrement du Service Worker:', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

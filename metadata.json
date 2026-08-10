@@ -1,0 +1,6 @@
+{
+  "name": "TikTok Profile Replica",
+  "description": "Pixel-perfect exact replica of the TikTok user profile interface from the provided screenshot.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
