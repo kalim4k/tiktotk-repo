@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Safe area inset support for mobile status bar & home bar */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+}
+
+body {
+  padding-top: var(--sat);
+  padding-bottom: var(--sab);
+}

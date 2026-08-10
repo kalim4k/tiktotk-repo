@@ -59,7 +59,7 @@ export const ProfileInfo: React.FC<ProfileInfoProps> = ({
           onClick={onEditProfile}
           className="flex items-center gap-1 font-bold text-[17px] text-gray-900 tracking-tight hover:opacity-80 transition-opacity"
         >
-          <span>{profile.username}</span>
+          <span className="blur-[6px] select-none">{profile.username}</span>
           {/* Small "v" chevron dropdown (~11px) */}
           <ChevronDown className="w-3.5 h-3.5 text-black stroke-[2.5]" />
         </button>
@@ -74,7 +74,7 @@ export const ProfileInfo: React.FC<ProfileInfoProps> = ({
       </div>
 
       {/* Handle */}
-      <p className="text-[13px] text-gray-500 font-normal mb-2 tracking-normal">
+      <p className="text-[13px] text-gray-500 font-normal mb-2 tracking-normal blur-[5px] select-none">
         {profile.handle}
       </p>
 
@@ -130,9 +130,24 @@ export const ProfileInfo: React.FC<ProfileInfoProps> = ({
           href={profile.website.startsWith('http') ? profile.website : `https://${profile.website}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-1.5 font-bold text-[14px] text-gray-900 my-1 hover:underline active:opacity-80 transition-opacity"
+          className="flex items-center justify-center gap-[2px] font-semibold text-[14px] text-gray-900 my-1 hover:underline active:opacity-80 transition-opacity"
         >
-          <LinkIcon className="w-4 h-4 text-black stroke-[2.5] -rotate-45" />
+          <svg
+            className="w-[19px] h-[19px] text-black shrink-0"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            {/* Top-right U loop */}
+            <path d="M 12.5 7.5 C 16.5 3.5, 20.5 7.5, 16.5 11.5" />
+            {/* Bottom-left U loop */}
+            <path d="M 11.5 16.5 C 7.5 20.5, 3.5 16.5, 7.5 12.5" />
+            {/* Center diagonal bar */}
+            <line x1="10.5" y1="13.5" x2="13.5" y2="10.5" />
+          </svg>
           <span>{profile.website}</span>
         </a>
       )}
