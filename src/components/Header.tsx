@@ -16,7 +16,10 @@ export const Header: React.FC<HeaderProps> = ({
   onAddUser,
 }) => {
   return (
-    <header className="sticky top-0 z-30 bg-white text-black px-4 py-1 flex items-center justify-between border-b border-gray-100/80">
+    <header
+      className="sticky top-0 z-30 bg-white text-black px-4 py-1 flex items-center justify-between border-b border-gray-100/80"
+      style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
+    >
       {/* Left: "Add friend" icon: Human silhouette with small + attached bottom-right */}
       <button
         onClick={onAddUser}

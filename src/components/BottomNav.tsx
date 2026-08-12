@@ -12,7 +12,10 @@ export const BottomNav: React.FC<BottomNavProps> = ({
   onUploadClick,
 }) => {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200/80 text-black max-w-lg mx-auto">
+    <nav
+      className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200/80 text-black max-w-lg mx-auto"
+      style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
+    >
       <div className="flex items-center justify-around h-[50px] px-2 relative">
         {/* 1. Home (house outline, gray) */}
         <button

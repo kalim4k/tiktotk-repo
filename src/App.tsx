@@ -66,7 +66,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-neutral-50 font-sans text-black selection:bg-[#ff2c55]/20">
       {/* Main Container - Responsive Web App */}
-      <div className="w-full max-w-lg mx-auto min-h-screen bg-white relative flex flex-col shadow-xs border-x border-gray-200/60">
+      <div
+        className="w-full max-w-lg mx-auto min-h-screen bg-white relative flex flex-col shadow-xs border-x border-gray-200/60"
+        style={{ paddingBottom: 'calc(60px + env(safe-area-inset-bottom, 0px))' }}
+      >
         
         {/* Top Header Bar */}
         <Header
