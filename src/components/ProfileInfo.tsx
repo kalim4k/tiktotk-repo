@@ -154,49 +154,49 @@ export const ProfileInfo: React.FC<ProfileInfoProps> = ({
 
       {/* Action Buttons: TikTok Studio & Promote */}
       <div className="flex items-center justify-center gap-5 my-1 py-0.5 w-full">
-        {/* TikTok Studio Button: Red-outlined person silhouette with white fill + red star on the right */}
+        {/* TikTok Studio Button */}
         <button
           onClick={onOpenTikTokStudio}
-          className="flex items-center justify-center gap-1.5 text-[14px] font-semibold text-[#0f0f0f] hover:opacity-80 transition-opacity active:scale-95"
+          className="flex items-center justify-center gap-1 text-[14px] font-semibold text-[#0f0f0f] hover:opacity-80 transition-opacity active:scale-95"
         >
           <svg
-            className="w-[19px] h-[19px]"
-            viewBox="0 0 100 100"
+            className="w-[15px] h-[15px] shrink-0"
+            viewBox="0 0 24 24"
             fill="none"
-            stroke="#FE2C55"
-            strokeWidth="6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
           >
-            {/* Tête (cercle) */}
-            <circle cx="45" cy="30" r="16" />
-            {/* Épaule / corps (arc ouvert) */}
-            <path d="M 25 62 A 20 20 0 0 1 55 47" />
-            {/* Étoile (remplie) */}
+            {/* Head */}
+            <circle cx="8.5" cy="8.5" r="3.2" stroke="#FE2C55" strokeWidth="1.8" />
+            {/* Body */}
             <path
-              d="M 74 44 L 80 58 L 95 59 L 83 68 L 87 82 L 74 74 L 61 82 L 65 68 L 53 59 L 68 58 Z"
+              d="M 3.5 18 C 3.5 14.5, 6 13.5, 8.5 13.5 C 10.5 13.5, 12 14.2, 13 15.5"
+              stroke="#FE2C55"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            />
+            {/* Star */}
+            <path
+              d="M 17.5 7.5 L 18.6 10.2 L 21.5 10.4 L 19.3 12.3 L 20 15.2 L 17.5 13.7 L 15 15.2 L 15.7 12.3 L 13.5 10.4 L 16.4 10.2 Z"
               fill="#FE2C55"
-              stroke="none"
             />
           </svg>
           <span>TikTok Studio</span>
         </button>
 
-        {/* Promote Button: Red flame icon */}
+        {/* Promote Button */}
         <button
           onClick={onOpenPromote}
-          className="flex items-center justify-center gap-1.5 text-[14px] font-semibold text-[#0f0f0f] hover:opacity-80 transition-opacity active:scale-95"
+          className="flex items-center justify-center gap-1 text-[14px] font-semibold text-[#0f0f0f] hover:opacity-80 transition-opacity active:scale-95"
         >
           <svg
-            className="w-[19px] h-[19px]"
-            viewBox="0 0 100 100"
+            className="w-[15px] h-[15px] shrink-0"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="#FE2C55"
-            strokeWidth="7"
+            strokeWidth="1.8"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <path d="M 50 18 C 45 32, 58 40, 58 52 C 63 46, 66 40, 65 33 C 78 45, 82 58, 82 68 C 82 84, 68 92, 50 92 C 32 92, 18 84, 18 68 C 18 58, 24 50, 30 45 C 30 55, 35 60, 38 62 C 35 48, 40 38, 50 18 Z" />
+            <path d="M 12 2.5 C 10 7, 13 9.5, 13 13 C 14.5 11.5, 15.5 10, 15 8 C 18.5 11, 19.5 14.5, 19.5 17 C 19.5 20.8, 16.5 22.5, 12 22.5 C 7.5 22.5, 4.5 20.8, 4.5 17 C 4.5 14.5, 6 12.5, 7.5 11.2 C 7.5 13.5, 8.8 14.8, 9.5 15.2 C 8.8 12, 10 9.5, 12 2.5 Z" />
           </svg>
           <span>Promote</span>
         </button>

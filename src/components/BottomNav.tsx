@@ -98,33 +98,33 @@ export const BottomNav: React.FC<BottomNavProps> = ({
           }`}
         >
           <div className="h-6 flex items-center justify-center">
-            <svg className="w-[30px] h-[22px]" viewBox="0 0 32 24" fill="none">
+            <svg className="w-[40px] h-[27px]" viewBox="0 0 42 28" fill="none">
               {/* Speech bubble contour */}
               <path
-                d="M 3 5 C 3 3.5, 4.2 2.5, 5.5 2.5 L 18.5 2.5 C 20 2.5, 21 3.5, 21 5 L 21 15 C 21 16.5, 20 17.5, 18.5 17.5 L 12 17.5 L 8 21.5 L 8 17.5 L 5.5 17.5 C 4.2 17.5, 3 16.5, 3 15 Z"
+                d="M 2 7 C 2 5, 3.2 3.5, 5 3.5 L 19.5 3.5 C 21.3 3.5, 22.5 5, 22.5 7 L 22.5 18 C 22.5 20, 21.3 21.2, 19.5 21.2 L 13 21.2 L 8 26 L 8 21.2 L 5 21.2 C 3.2 21.2, 2 20, 2 18 Z"
                 stroke="currentColor"
-                strokeWidth="1.8"
+                strokeWidth="2"
                 strokeLinejoin="round"
                 strokeLinecap="round"
               />
               {/* Inner horizontal line */}
               <line
                 x1="8"
-                y1="10"
+                y1="12"
                 x2="16"
-                y2="10"
+                y2="12"
                 stroke="currentColor"
-                strokeWidth="1.8"
+                strokeWidth="2"
                 strokeLinecap="round"
               />
               {/* Badge "99+" */}
-              <rect x="13" y="0.5" width="18.5" height="11" rx="5.5" fill="#FE2C55" />
+              <rect x="13" y="0" width="27" height="15.5" rx="7.75" fill="#FE2C55" />
               <text
-                x="22.2"
-                y="8.8"
+                x="26.5"
+                y="11.5"
                 fontFamily="sans-serif"
                 fontWeight="bold"
-                fontSize="7.5"
+                fontSize="10.8"
                 fill="white"
                 textAnchor="middle"
               >
