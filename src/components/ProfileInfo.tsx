@@ -59,7 +59,7 @@ export const ProfileInfo: React.FC<ProfileInfoProps> = ({
           onClick={onEditProfile}
           className="flex items-center gap-1 font-bold text-[17px] text-gray-900 tracking-tight hover:opacity-80 transition-opacity"
         >
-          <span className="blur-[6px] select-none">{profile.username}</span>
+          <span>{profile.username}</span>
           {/* Small "v" chevron dropdown (~11px) */}
           <ChevronDown className="w-3.5 h-3.5 text-black stroke-[2.5]" />
         </button>
@@ -74,7 +74,7 @@ export const ProfileInfo: React.FC<ProfileInfoProps> = ({
       </div>
 
       {/* Handle */}
-      <p className="text-[13px] text-gray-500 font-normal mb-2 tracking-normal blur-[5px] select-none">
+      <p className="text-[13px] text-gray-500 font-normal mb-2 tracking-normal">
         {profile.handle}
       </p>
 
